@@ -1,0 +1,19 @@
+apiVersion: networking.istio.io/v1
+kind: VirtualService
+metadata:
+  name: harbor-baojiliu-xyz
+spec:
+  gateways:
+    - harbor
+  hosts:
+  - harbor.baojiliu.xyz
+  http:
+    - name: "harbor"
+      match:
+        - uri:
+            prefix: /
+      route:
+      - destination:
+          host: harbor
+          port:
+            number: 80

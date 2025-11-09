@@ -33,6 +33,7 @@ spec:
     - client auth
   dnsNames:
     - "www.baojiliu.xyz"
+    - "harbor.baojiliu.xyz"
   issuerRef:
     name: letsencrypt
     kind: ClusterIssuer
